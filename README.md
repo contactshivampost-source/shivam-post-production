@@ -24,8 +24,14 @@ Open `script.js`:
 ## Update WhatsApp
 The current WhatsApp link is set to `https://wa.me/9779713517297` based on the supplied Nepal number. If the number needs a different country code or digits, update the link in `index.html`.
 
-## Update the intro video
-The hero currently embeds the supplied YouTube video. To change it, replace the video ID in the iframe `src` in `index.html`.
+## Add your intro video (brand-free player)
+The hero uses a custom HTML5 player, so no YouTube logo, channel branding, or YouTube controls are shown. To publish your showreel:
+1. Create an `assets` folder beside `index.html` if it does not exist.
+2. Copy your exported MP4 into it and name it `showreel.mp4`.
+3. Upload the `assets/showreel.mp4` file to the same GitHub repository and commit it.
+4. Refresh the live site. The custom play, timeline, volume, mute and fullscreen controls will work with the MP4.
+
+The ZIP includes a poster preview, but it does not include the actual video file because no MP4 was supplied in this update. The player will display a short setup note until `assets/showreel.mp4` is added. Use a compressed web-ready MP4 so it loads quickly; GitHub's browser upload limit may require a video CDN or file host for larger videos.
 
 ## Notes
 - Fonts are loaded from Google Fonts; a system font fallback is provided.
@@ -39,3 +45,9 @@ The hero currently embeds the supplied YouTube video. To change it, replace the 
 - Removes the thin outer matte around the embedded video with a very slight centered crop.
 - Adds subtle cursor-follow tilt and soft highlight to the hero video, all four selected-work visuals, and all package cards.
 - Keeps the existing YouTube audio controls and mobile layout; pointer effects are disabled on touch devices.
+
+
+## V8 custom video player
+- Replaces the YouTube iframe with a brand-free HTML5 MP4 player.
+- Includes custom play/pause, seek, time display, volume, mute and fullscreen controls.
+- Requires your own exported file at `assets/showreel.mp4`; the source MP4 was not included.
