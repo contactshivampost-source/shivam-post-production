@@ -558,3 +558,99 @@ body { color: var(--v9-ink); text-rendering: optimizeLegibility; -webkit-font-sm
 .hero-title .outline-word {
   -webkit-text-stroke-color: #a5afbf !important;
 }
+
+
+/* V14 — restrained Apple-style motion typography + warm bronze card edge. */
+/* Remove all broad blue ambience around the hero card; keep only one fine light line. */
+.hero-media .media-aura,
+.hero-video-frame .card-orbit-light {
+  display: none !important;
+}
+.hero-video-frame {
+  border: 1px solid rgba(153, 104, 65, .72) !important;
+  box-shadow:
+    0 0 0 1px rgba(183, 132, 88, .12),
+    0 0 14px rgba(150, 91, 48, .34),
+    0 0 34px rgba(150, 91, 48, .22),
+    0 28px 78px rgba(25, 24, 22, .16) !important;
+  isolation: isolate;
+}
+.hero-video-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(211, 164, 119, .68);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 5;
+  opacity: .72;
+  animation: bronze-edge-breathe 5.8s ease-in-out infinite;
+}
+@keyframes bronze-edge-breathe {
+  0%, 100% {
+    opacity: .48;
+    box-shadow: inset 0 0 5px rgba(191, 133, 83, .10), 0 0 7px rgba(160, 100, 57, .14);
+  }
+  50% {
+    opacity: .95;
+    box-shadow: inset 0 0 10px rgba(191, 133, 83, .20), 0 0 17px rgba(160, 100, 57, .36);
+  }
+}
+
+/* Continuous, polished motion: slow lift + a controlled metallic-blue sheen. */
+.hero-title {
+  animation: hero-title-drift 7.2s cubic-bezier(.45, 0, .55, 1) infinite;
+  will-change: transform;
+}
+.hero-title .outline-word {
+  display: inline-block;
+  animation: frame-stroke 5.6s ease-in-out infinite;
+  will-change: filter, -webkit-text-stroke-color;
+}
+.hero-title .blue-word {
+  display: inline-block;
+  background-image: linear-gradient(
+    110deg,
+    #1266e8 0%,
+    #398dff 24%,
+    #a4d5ff 42%,
+    #287df0 58%,
+    #1266e8 78%,
+    #70b9ff 100%
+  ) !important;
+  background-size: 240% 100% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  animation: matter-sheen 5.2s ease-in-out infinite, matter-lift 6.4s ease-in-out infinite;
+  will-change: background-position, filter, transform;
+}
+@keyframes hero-title-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -5px, 0); }
+}
+@keyframes frame-stroke {
+  0%, 100% {
+    -webkit-text-stroke-color: #9aa8bb;
+    filter: drop-shadow(0 0 0 rgba(48, 126, 230, 0));
+  }
+  50% {
+    -webkit-text-stroke-color: #5f9de9;
+    filter: drop-shadow(0 0 9px rgba(65, 142, 245, .22));
+  }
+}
+@keyframes matter-sheen {
+  0%, 100% { background-position: 100% 50%; filter: drop-shadow(0 2px 0 rgba(20, 91, 190, .04)); }
+  50% { background-position: 0% 50%; filter: drop-shadow(0 3px 13px rgba(35, 119, 230, .20)); }
+}
+@keyframes matter-lift {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-3px) scale(1.008); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-title, .hero-title .outline-word, .hero-title .blue-word,
+  .hero-video-frame::before {
+    animation: none !important;
+  }
+  .hero-title .blue-word { background-position: 50% 50% !important; }
+}
