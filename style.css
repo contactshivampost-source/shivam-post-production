@@ -426,3 +426,62 @@ body { color: var(--v9-ink); text-rendering: optimizeLegibility; -webkit-font-sm
 @media (max-width: 520px) {
   #work .project-visual { aspect-ratio: 16 / 9 !important; }
 }
+
+/* V13 — continuous premium headline motion and sky-blue side lighting. */
+.hero-title {
+  animation: heroTitleFloat 7s ease-in-out infinite;
+  transform-origin: 50% 55%;
+}
+.hero-title .outline-word {
+  animation: frameOutlineGlow 4.8s ease-in-out infinite;
+}
+.hero-title .blue-word {
+  background-size: 240% 100%;
+  animation: titleBlueFlow 5.5s ease-in-out infinite;
+}
+@keyframes heroTitleFloat {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(63,145,255,0)); }
+  50% { filter: drop-shadow(0 10px 24px rgba(63,145,255,.10)); }
+}
+@keyframes frameOutlineGlow {
+  0%, 100% { -webkit-text-stroke-color: #8798b2; text-shadow: 0 0 0 rgba(83,157,255,0); }
+  50% { -webkit-text-stroke-color: #70aaff; text-shadow: 0 0 22px rgba(83,157,255,.20); }
+}
+@keyframes titleBlueFlow {
+  0%, 100% { background-position: 0% 50%; filter: drop-shadow(0 0 0 rgba(48,132,255,0)); }
+  50% { background-position: 100% 50%; filter: drop-shadow(0 5px 18px rgba(48,132,255,.18)); }
+}
+.hero-media::before,
+.hero-media::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 34px;
+  filter: blur(25px);
+  opacity: .72;
+  animation: cardSideGlow 5.8s ease-in-out infinite alternate;
+}
+.hero-media::before {
+  inset: -17px -13px;
+  background:
+    radial-gradient(ellipse 13% 65% at 0% 50%, rgba(76,166,255,.58), transparent 78%),
+    radial-gradient(ellipse 13% 65% at 100% 50%, rgba(76,166,255,.58), transparent 78%);
+}
+.hero-media::after {
+  inset: -10px -8px;
+  filter: blur(35px);
+  opacity: .36;
+  animation-delay: -2.9s;
+  background:
+    radial-gradient(ellipse 9% 45% at 0% 50%, rgba(160,218,255,.72), transparent 80%),
+    radial-gradient(ellipse 9% 45% at 100% 50%, rgba(160,218,255,.72), transparent 80%);
+}
+@keyframes cardSideGlow {
+  from { opacity: .42; transform: scaleY(.96); }
+  to { opacity: .88; transform: scaleY(1.035); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-title, .hero-title .outline-word, .hero-title .blue-word,
+  .hero-media::before, .hero-media::after { animation: none !important; }
+}
