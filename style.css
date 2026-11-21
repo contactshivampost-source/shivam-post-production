@@ -666,3 +666,22 @@ body { color: var(--v9-ink); text-rendering: optimizeLegibility; -webkit-font-sm
   animation: none !important;
   box-shadow: none !important;
 }
+
+
+/* V16 — remove the card outline completely; keep the card clean and unlit. */
+.hero-video-frame,
+.hero-video-frame:hover,
+.hero-video-frame.is-pointer-active {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.hero-video-frame::before,
+.hero-video-frame::after,
+.hero-video-frame.is-pointer-active::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+}
