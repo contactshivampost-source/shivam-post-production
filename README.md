@@ -57,3 +57,8 @@ To use a completely brand-free player instead, replace the embed with an exporte
 - Replaces the empty MP4 placeholder with the supplied YouTube showreel link.
 - Removes the "Add your showreel video" overlay and the nonfunctional custom MP4 controls.
 - Uses a rounded 16:9 edge-to-edge embed with a subtle crop to conceal thin outer matte edges.
+
+
+## Documentary project video
+- The Documentary Editing card is connected to the supplied YouTube video: https://youtu.be/X7utxgBSWS4
+- Click the Documentary card or its “VIEW PROJECT” link to open the project dialog, then choose “WATCH PROJECT” to view the video.
