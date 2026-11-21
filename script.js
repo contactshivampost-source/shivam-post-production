@@ -45,23 +45,6 @@ if (matchMedia("(pointer:fine)").matches) {
   });
 }
 
-// Subtle tilt on large cards (desktop only)
-if (matchMedia("(pointer:fine) and (min-width: 801px)").matches) {
-  document.querySelectorAll("[data-tilt]").forEach(card => {
-    card.addEventListener("mousemove", e => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - .5;
-      const y = (e.clientY - r.top) / r.height - .5;
-      const target = card.querySelector(".project-visual") || card.querySelector(".hero-video-frame");
-      if (target) target.style.transform = `rotateY(${x * 2.6}deg) rotateX(${-y * 2.2}deg)`;
-    });
-    card.addEventListener("mouseleave", () => {
-      const target = card.querySelector(".project-visual") || card.querySelector(".hero-video-frame");
-      if (target) target.style.transform = "";
-    });
-  });
-}
-
 // Project modal: if URL exists, open it; otherwise show a clear placeholder message.
 const dialog = document.querySelector(".project-dialog");
 const dialogTitle = dialog.querySelector(".dialog-title");
