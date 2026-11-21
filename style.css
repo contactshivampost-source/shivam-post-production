@@ -383,3 +383,32 @@ body { color: var(--v9-ink); text-rendering: optimizeLegibility; -webkit-font-sm
   .card-orbit-light::before { opacity: .32; }
   .reveal, .reveal.is-visible { transition-delay: 0ms !important; }
 }
+
+
+/* V12 — place the actual documentary video directly inside project card 01. */
+.visual-doc-video {
+  aspect-ratio: 16 / 9 !important;
+  background: #080b12 !important;
+  color: #fff;
+}
+.visual-doc-video::after { display: none !important; }
+.doc-video-embed {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #080b12;
+}
+.doc-video-embed iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: scale(1.012);
+  transform-origin: center;
+}
+@media (max-width: 520px) {
+  .visual-doc-video { aspect-ratio: 16 / 9 !important; }
+}

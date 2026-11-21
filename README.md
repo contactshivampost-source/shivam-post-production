@@ -62,3 +62,9 @@ To use a completely brand-free player instead, replace the embed with an exporte
 ## Documentary project video
 - The Documentary Editing card is connected to the supplied YouTube video: https://youtu.be/X7utxgBSWS4
 - Click the Documentary card or its “VIEW PROJECT” link to open the project dialog, then choose “WATCH PROJECT” to view the video.
+
+
+## V12 documentary card embed
+- The supplied documentary YouTube video (`X7utxgBSWS4`) is now embedded directly inside the first Documentary project card.
+- The card uses a 16:9 frame. Playback starts muted (browser autoplay requirement) and YouTube controls are enabled so visitors can unmute for sound.
+- YouTube branding may remain inside its embedded player; this cannot be completely removed from a YouTube iframe.
