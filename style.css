@@ -654,3 +654,15 @@ body { color: var(--v9-ink); text-rendering: optimizeLegibility; -webkit-font-sm
   }
   .hero-title .blue-word { background-position: 50% 50% !important; }
 }
+
+/* V15 — clean card edge: no glow, only a fine black outline. */
+.hero-video-frame {
+  border: 1px solid rgba(0, 0, 0, .88) !important;
+  box-shadow: none !important;
+}
+.hero-video-frame::before {
+  content: none !important;
+  display: none !important;
+  animation: none !important;
+  box-shadow: none !important;
+}
