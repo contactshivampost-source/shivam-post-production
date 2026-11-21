@@ -111,3 +111,35 @@ function softTick() {
   } catch (_) {}
 }
 document.querySelectorAll("a,button").forEach(el => el.addEventListener("click", softTick));
+
+
+// Apple-style pointer movement: tiny, smooth tilt and a soft light that follows the cursor.
+// Applied to the hero video, all four portfolio visuals, and each package card.
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const pointerCards = document.querySelectorAll('.hero-video-frame, .project-visual, .package-card');
+  pointerCards.forEach((card) => {
+    const tiltLimit = card.classList.contains('hero-video-frame') ? 1.05 : 1.35;
+    const onPointerMove = (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+      const y = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
+      const rotateX = (0.5 - y) * tiltLimit * 2;
+      const rotateY = (x - 0.5) * tiltLimit * 2;
+      card.style.setProperty('--tilt-x', `${rotateX.toFixed(2)}deg`);
+      card.style.setProperty('--tilt-y', `${rotateY.toFixed(2)}deg`);
+      card.style.setProperty('--pointer-x', `${(x * 100).toFixed(1)}%`);
+      card.style.setProperty('--pointer-y', `${(y * 100).toFixed(1)}%`);
+      card.classList.add('is-pointer-active');
+    };
+    const resetPointer = () => {
+      card.style.setProperty('--tilt-x', '0deg');
+      card.style.setProperty('--tilt-y', '0deg');
+      card.style.setProperty('--pointer-x', '50%');
+      card.style.setProperty('--pointer-y', '50%');
+      card.classList.remove('is-pointer-active');
+    };
+    card.addEventListener('pointermove', onPointerMove, { passive: true });
+    card.addEventListener('pointerleave', resetPointer);
+    card.addEventListener('pointercancel', resetPointer);
+  });
+}

@@ -33,3 +33,9 @@ The hero currently embeds the supplied YouTube video. To change it, replace the 
 - Interaction sounds are subtle synthesized tones and only play after a user click, subject to browser audio permissions.
 - The custom cursor is disabled on touch devices. Reduced-motion preferences are respected.
 - Project visual panels are designed placeholders, not real client footage. Replace them with thumbnails or video embeds when your project links are ready.
+
+
+## V7 interaction polish
+- Removes the thin outer matte around the embedded video with a very slight centered crop.
+- Adds subtle cursor-follow tilt and soft highlight to the hero video, all four selected-work visuals, and all package cards.
+- Keeps the existing YouTube audio controls and mobile layout; pointer effects are disabled on touch devices.
