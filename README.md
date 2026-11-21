@@ -68,3 +68,6 @@ To use a completely brand-free player instead, replace the embed with an exporte
 - The supplied documentary YouTube video (`X7utxgBSWS4`) is now embedded directly inside the first Documentary project card.
 - The card uses a 16:9 frame. Playback starts muted (browser autoplay requirement) and YouTube controls are enabled so visitors can unmute for sound.
 - YouTube branding may remain inside its embedded player; this cannot be completely removed from a YouTube iframe.
+
+## V13 portfolio card sizing
+All four selected-work preview cards use a consistent 16:9 widescreen aspect ratio on desktop and mobile. No project video links, player settings, or motion behavior were changed in this update.

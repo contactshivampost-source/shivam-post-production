@@ -412,3 +412,17 @@ body { color: var(--v9-ink); text-rendering: optimizeLegibility; -webkit-font-sm
 @media (max-width: 520px) {
   .visual-doc-video { aspect-ratio: 16 / 9 !important; }
 }
+
+/* V13 — keep all four portfolio preview cards on one consistent widescreen canvas. */
+#work .project-visual {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 16 / 9 !important;
+}
+@media (max-width: 800px) {
+  #work .project-visual { aspect-ratio: 16 / 9 !important; }
+}
+@media (max-width: 520px) {
+  #work .project-visual { aspect-ratio: 16 / 9 !important; }
+}
