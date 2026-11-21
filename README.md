@@ -24,14 +24,14 @@ Open `script.js`:
 ## Update WhatsApp
 The current WhatsApp link is set to `https://wa.me/9779713517297` based on the supplied Nepal number. If the number needs a different country code or digits, update the link in `index.html`.
 
-## Add your intro video (brand-free player)
-The hero uses a custom HTML5 player, so no YouTube logo, channel branding, or YouTube controls are shown. To publish your showreel:
-1. Create an `assets` folder beside `index.html` if it does not exist.
-2. Copy your exported MP4 into it and name it `showreel.mp4`.
-3. Upload the `assets/showreel.mp4` file to the same GitHub repository and commit it.
-4. Refresh the live site. The custom play, timeline, volume, mute and fullscreen controls will work with the MP4.
+## Hero showreel video
+The hero video uses the YouTube link supplied for this portfolio:
+- https://youtu.be/LsM6JlXAsaA
+- Embedded through the privacy-enhanced `youtube-nocookie.com` player.
+- The embed fills the 16:9 hero card and receives a slight centered crop to hide tiny edge mattes.
+- YouTube's own playback UI/branding may still appear inside the iframe; YouTube does not allow a third-party page to completely remove it.
 
-The ZIP includes a poster preview, but it does not include the actual video file because no MP4 was supplied in this update. The player will display a short setup note until `assets/showreel.mp4` is added. Use a compressed web-ready MP4 so it loads quickly; GitHub's browser upload limit may require a video CDN or file host for larger videos.
+To use a completely brand-free player instead, replace the embed with an exported MP4 that you own and host.
 
 ## Notes
 - Fonts are loaded from Google Fonts; a system font fallback is provided.
@@ -51,3 +51,9 @@ The ZIP includes a poster preview, but it does not include the actual video file
 - Replaces the YouTube iframe with a brand-free HTML5 MP4 player.
 - Includes custom play/pause, seek, time display, volume, mute and fullscreen controls.
 - Requires your own exported file at `assets/showreel.mp4`; the source MP4 was not included.
+
+
+## V10 YouTube showreel update
+- Replaces the empty MP4 placeholder with the supplied YouTube showreel link.
+- Removes the "Add your showreel video" overlay and the nonfunctional custom MP4 controls.
+- Uses a rounded 16:9 edge-to-edge embed with a subtle crop to conceal thin outer matte edges.
