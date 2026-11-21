@@ -517,3 +517,44 @@ body { color: var(--v9-ink); text-rendering: optimizeLegibility; -webkit-font-sm
   .hero-title, .hero-title .outline-word, .hero-title .blue-word,
   .hero-media::before, .hero-media::after { animation: none !important; }
 }
+
+/* User revision: remove all lighting from the large showreel card and keep the hero headline static. */
+.hero-media::before,
+.hero-media::after,
+.hero-media .media-aura,
+.hero-video-frame .card-orbit-light {
+  display: none !important;
+  animation: none !important;
+  opacity: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+.hero-video-frame,
+.hero-video-frame:hover,
+.hero-video-frame.is-pointer-active {
+  box-shadow: 0 18px 48px rgba(17,39,73,.10) !important;
+  transform: none !important;
+}
+.hero-video-frame::after,
+.hero-video-frame.is-pointer-active::after {
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+}
+.hero-title,
+.hero-title .outline-word,
+.hero-title .blue-word {
+  animation: none !important;
+  transform: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+  will-change: auto !important;
+}
+.hero-title .blue-word {
+  background: none !important;
+  color: #1677ff !important;
+  -webkit-text-fill-color: #1677ff !important;
+}
+.hero-title .outline-word {
+  -webkit-text-stroke-color: #a5afbf !important;
+}
