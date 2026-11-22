@@ -68,9 +68,3 @@ To use a completely brand-free player instead, replace the embed with an exporte
 - The supplied documentary YouTube video (`X7utxgBSWS4`) is now embedded directly inside the first Documentary project card.
 - The card uses a 16:9 frame. Playback starts muted (browser autoplay requirement) and YouTube controls are enabled so visitors can unmute for sound.
 - YouTube branding may remain inside its embedded player; this cannot be completely removed from a YouTube iframe.
-
-
-## Video embeds removed
-- Removed the hero showreel YouTube player.
-- Removed the documentary project YouTube player.
-- Kept the hero text and documentary project card design; no video plays on the page.

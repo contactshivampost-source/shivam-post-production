@@ -192,4 +192,4 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   });
 }
 
-// Video embeds have been removed from this portfolio.
+// The hero showreel is embedded from the supplied YouTube URL in index.html.
