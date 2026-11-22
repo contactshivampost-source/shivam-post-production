@@ -1,6 +1,6 @@
 // SHIVAM POST portfolio — update the project URLs and social links below.
 const PROJECTS = {
-  documentary: { title: "Documentary Editing", description: "Watch the documentary project.", url: "https://youtu.be/X7utxgBSWS4" },
+  documentary: { title: "Documentary Editing", description: "Watch the documentary project.", url: "" },
   retention: { title: "Retention-Based Editing", description: "A high-retention edit built around hooks, rhythm and visual pacing. Add your final video URL in script.js when ready.", url: "" },
   podcast: { title: "Podcast Editing", description: "A polished conversation edit with clean pacing and audio. Add your final video URL in script.js when ready.", url: "" },
   talkinghead: { title: "Talking-Head Editing", description: "Creator-focused editing with clear structure and supporting motion. Add your final video URL in script.js when ready.", url: "" }
@@ -192,4 +192,4 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   });
 }
 
-// The hero showreel is embedded from the supplied YouTube URL in index.html.
+// Video embeds have been removed from this portfolio.
