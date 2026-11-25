@@ -5,7 +5,7 @@ const PROJECTS = {
   podcast: { title: "Podcast Editing", description: "A polished conversation edit with clean pacing and audio. Add your final video URL in script.js when ready.", url: "" },
   talkinghead: { title: "Talking-Head Editing", description: "Creator-focused editing with clear structure and supporting motion. Add your final video URL in script.js when ready.", url: "" }
 };
-const SOCIALS = { Instagram: "", YouTube: "", GitHub: "" };
+const SOCIALS = { Instagram: "", YouTube: "", LinkedIn: "" };
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
