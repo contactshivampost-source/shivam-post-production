@@ -412,3 +412,18 @@ body { color: var(--v9-ink); text-rendering: optimizeLegibility; -webkit-font-sm
 @media (max-width: 520px) {
   .visual-doc-video { aspect-ratio: 16 / 9 !important; }
 }
+
+/* Match all four portfolio project cards to a 16:9 frame */
+.project-visual.visual-retention,
+.project-visual.visual-podcast,
+.project-visual.visual-talking {
+  aspect-ratio: 16 / 9 !important;
+}
+
+@media (max-width: 800px) {
+  .project-visual.visual-retention,
+  .project-visual.visual-podcast,
+  .project-visual.visual-talking {
+    aspect-ratio: 16 / 9 !important;
+  }
+}
